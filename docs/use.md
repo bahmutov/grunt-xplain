@@ -1,17 +1,19 @@
 ## Example
 
-Checks if all JavaScript files are non-empty.
+Generate API doc into folder `api` from JavaScript source files
+in the `test` folder, expecting Jasmine framework
 
 ```js
 // Gruntfile.js
 grunt.initConfig({
-  blank: {
+  xplain: {
     options: {
-      minBytes: 2
+      dir: 'api',
+      framework: 'jasmine'
     },
-    src: ['src/**/*.js']
+    src: ['test/*.js']
   }
 });
-grunt.loadNpmTasks('grunt-blank');
-grunt.registerTask('default', ['blank']);
+grunt.loadNpmTasks('grunt-xplain');
+grunt.registerTask('default', ['xplain']);
 ```

@@ -1,44 +1,46 @@
-# grunt-blank v0.1.1
+# grunt-xplain v0.1.0
 
-> Finds empty, blank or small files
+> Generates API docs from unit tests using xplain
 
-[![NPM][grunt-blank-icon] ][grunt-blank-url]
+[![NPM][grunt-xplain-icon] ][grunt-xplain-url]
 
-[![Build status][grunt-blank-ci-image] ][grunt-blank-ci-url]
-[![dependencies][grunt-blank-dependencies-image] ][grunt-blank-dependencies-url]
-[![devdependencies][grunt-blank-devdependencies-image] ][grunt-blank-devdependencies-url]
+[![Build status][grunt-xplain-ci-image] ][grunt-xplain-ci-url]
+[![dependencies][grunt-xplain-dependencies-image] ][grunt-xplain-dependencies-url]
+[![devdependencies][grunt-xplain-devdependencies-image] ][grunt-xplain-devdependencies-url]
 
-[grunt-blank-icon]: https://nodei.co/npm/grunt-blank.png?downloads=true
-[grunt-blank-url]: https://npmjs.org/package/grunt-blank
-[grunt-blank-ci-image]: https://travis-ci.org/bahmutov/grunt-blank.png?branch=master
-[grunt-blank-ci-url]: https://travis-ci.org/bahmutov/grunt-blank
-[grunt-blank-dependencies-image]: https://david-dm.org/bahmutov/grunt-blank.png
-[grunt-blank-dependencies-url]: https://david-dm.org/bahmutov/grunt-blank
-[grunt-blank-devdependencies-image]: https://david-dm.org/bahmutov/grunt-blank/dev-status.png
-[grunt-blank-devdependencies-url]: https://david-dm.org/bahmutov/grunt-blank#info=devDependencies
+[grunt-xplain-icon]: https://nodei.co/npm/grunt-xplain.png?downloads=true
+[grunt-xplain-url]: https://npmjs.org/package/grunt-xplain
+[grunt-xplain-ci-image]: https://travis-ci.org/bahmutov/grunt-xplain.png?branch=master
+[grunt-xplain-ci-url]: https://travis-ci.org/bahmutov/grunt-xplain
+[grunt-xplain-dependencies-image]: https://david-dm.org/bahmutov/grunt-xplain.png
+[grunt-xplain-dependencies-url]: https://david-dm.org/bahmutov/grunt-xplain
+[grunt-xplain-devdependencies-image]: https://david-dm.org/bahmutov/grunt-xplain/dev-status.png
+[grunt-xplain-devdependencies-url]: https://david-dm.org/bahmutov/grunt-xplain#info=devDependencies
 
 
 
 ### Install
 
-`npm install grunt-blank --save-dev`
+`npm install grunt-xplain --save-dev`
 
 ### Example
 
-Checks if all JavaScript files are non-empty.
+Generate API doc into folder `api` from JavaScript source files
+in the `test` folder, expecting Jasmine framework
 
 ```js
 // Gruntfile.js
 grunt.initConfig({
-  blank: {
+  xplain: {
     options: {
-      minBytes: 2
+      dir: 'api',
+      framework: 'jasmine'
     },
-    src: ['src/**/*.js']
+    src: ['test/*.js']
   }
 });
-grunt.loadNpmTasks('grunt-blank');
-grunt.registerTask('default', ['blank']);
+grunt.loadNpmTasks('grunt-xplain');
+grunt.registerTask('default', ['xplain']);
 ```
 
 
@@ -56,7 +58,7 @@ License: MIT - do anything with the code, but don't blame me if it does not work
 Spread the word: tweet, star on github, etc.
 
 Support: if you find any problems with this module, email / tweet /
-[open issue](https://github.com/bahmutov/grunt-blank/issues) on Github
+[open issue](https://github.com/bahmutov/grunt-xplain/issues) on Github
 
 
 
