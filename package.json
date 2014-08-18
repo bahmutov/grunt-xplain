@@ -1,0 +1,51 @@
+{
+  "name": "grunt-xplain",
+  "description": "Generates API docs from unit tests using xplain",
+  "version": "0.1.0",
+  "author": {
+    "name": "Gleb Bahmutov",
+    "email": "gleb.bahmutov@gmail.com",
+    "url": "http://glebbahmutov.com"
+  },
+  "bugs": {
+    "url": "https://github.com/bahmutov/grunt-xplain/issues"
+  },
+  "dependencies": {
+    "check-types": "1.3.1",
+    "lazy-ass": "0.5.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "0.10.0",
+    "grunt-jshint-solid": "0.1.0",
+    "grunt-nice-package": "0.9.1",
+    "grunt-readme": "0.4.5",
+    "jshint-stylish": "0.4.0",
+    "matchdep": "0.3.0",
+    "pre-git": "0.0.16"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "homepage": "https://github.com/bahmutov/grunt-xplain",
+  "keywords": [
+    "gruntplugin",
+    "doc",
+    "docs",
+    "documentation",
+    "jsdoc",
+    "xplain"
+  ],
+  "license": "MIT",
+  "main": "Gruntfile.js",
+  "peerDependencies": {
+    "grunt": "0.4.5"
+  },
+  "pre-commit": "grunt",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bahmutov/grunt-xplain.git"
+  },
+  "scripts": {
+    "test": "grunt"
+  }
+}
