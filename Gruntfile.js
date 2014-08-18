@@ -14,7 +14,8 @@ module.exports = function(grunt) {
 
     xplain: {
       options: {
-        dir: 'api'
+        dir: 'api',
+        framework: 'jasmine'
       },
       src: ['test/*.js']
     },

@@ -4,6 +4,8 @@
 
 {%= _.doc("./docs/badges.md") %}
 
+Grunt wrapper for [xplain](https://github.com/bahmutov/xplain)
+
 ### Install
 
 `npm install grunt-xplain --save-dev`
