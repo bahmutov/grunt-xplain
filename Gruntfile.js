@@ -1,16 +1,6 @@
-/*
- * grunt-blank
- * https://github.com/bahmutov/grunt-blank
- *
- * Copyright (c) 2014 Gleb Bahmutov
- * Licensed under the MIT license.
- */
-
-'use strict';
-
 module.exports = function(grunt) {
+  'use strict';
 
-  // Project configuration.
   grunt.initConfig({
     jshint: {
       all: [
@@ -22,12 +12,11 @@ module.exports = function(grunt) {
       }
     },
 
-    blank: {
+    xplain: {
       options: {
-        minBytes: 2
+        dir: 'api'
       },
-      src: ['Gruntfile.js', 'tasks/*.js'],
-      invalid: ['Gruntfile.js', 'tasks/*.js', 'test/*.js']
+      src: ['test/*.js']
     },
 
     readme: {
@@ -44,5 +33,5 @@ module.exports = function(grunt) {
   plugins.forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('default',
-    ['jshint', 'jshint-solid', 'nice-package', 'blank:src', 'readme']);
+    ['jshint', 'jshint-solid', 'nice-package', 'xplain', 'readme']);
 };
