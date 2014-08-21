@@ -1,4 +1,4 @@
-# grunt-xplain v0.2.1
+# grunt-xplain v0.2.2
 
 > Generates API docs from unit tests using xplain
 
@@ -28,17 +28,17 @@ Grunt wrapper for [xplain](https://github.com/bahmutov/xplain)
 ### Example
 
 Generate API doc into folder `api` from JavaScript source files
-in the `test` folder, expecting Jasmine framework
+in the `src` and `test` folders using Jasmine framework
 
 ```js
 // Gruntfile.js
 grunt.initConfig({
   xplain: {
     options: {
-      dir: 'api',
+      output: 'api',
       framework: 'jasmine'
     },
-    src: ['test/*.js']
+    src: ['src/*.js', 'test/*.js']
   }
 });
 grunt.loadNpmTasks('grunt-xplain');

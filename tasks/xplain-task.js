@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 
   function runExplain(self) {
     var options = self.options({
-      dir: 'api',
+      output: 'api',
       framework: 'jasmine'
     });
 
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     lazyAss(check.fn(done), 'could not get async done function');
 
     xplain.document({
-      outputFolder: options.dir,
+      outputFolder: options.output,
       patterns: allFiles,
       framework: options.framework
     }).then(function (results) {
