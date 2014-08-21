@@ -14,10 +14,20 @@ module.exports = function(grunt) {
 
     xplain: {
       options: {
-        dir: 'api',
         framework: 'jasmine'
       },
-      src: ['test/*.js']
+      toHtml: {
+        options: {
+          output: 'api'
+        },
+        src: ['test/*.js']
+      },
+      toMarkdown: {
+        options: {
+          output: 'test/api.md'
+        },
+        src: ['test/*.js']
+      }
     },
 
     readme: {
@@ -34,5 +44,5 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
 
   grunt.registerTask('default',
-    ['jshint', 'jshint-solid', 'nice-package', 'xplain', 'readme']);
+    ['jshint', 'jshint-solid', 'nice-package', 'xplain:toHtml', 'readme']);
 };
