@@ -44,5 +44,5 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
 
   grunt.registerTask('default',
-    ['jshint', 'jshint-solid', 'nice-package', 'xplain:toHtml', 'readme']);
+    ['deps-ok', 'jshint', 'jshint-solid', 'nice-package', 'xplain', 'readme']);
 };
