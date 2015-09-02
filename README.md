@@ -1,4 +1,4 @@
-# grunt-xplain v0.2.5
+# grunt-xplain v0.2.6
 
 > Generates API docs from unit tests using xplain
 
